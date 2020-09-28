@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./asset/fontawesome-free-5.14.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./asset/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
 </head>
 
 <body>
@@ -18,20 +20,62 @@
         <img id="profile" src="./asset/972941670f3f9c895c2ddbaf50e65fc608ce90e6153a40bdce13c83717942f26.jpg" alt=""
             class="mb-5">
         <h1 class="mb-1">Taurean Orlin Wingardi</h1>
-        <h3>Backend Developer</h3>
+        Backend Developer
     </div>
 
     <div id="section-2" class="section">
-        <h1>Skills</h1>
+        <h1 class="mb-5">Skills</h1>
+        <div class="skill-group d-flex flex-row justify-content-around w-100">
+            <div class="skill">
+                <div class="skilllogo d-flex justify-content-center align-items-center mb-3">
+                    <i class="fab fa-html5 fa-5x"></i>
+                </div>
+                <p class="text-center">HTML</p>
+            </div>
+
+            <div class="skill">
+                <div class="skilllogo d-flex justify-content-center align-items-center mb-3">
+                    <i class="fab fa-js-square fa-5x"></i>
+                </div>
+                <p class="text-center">JavaScript</p>
+            </div>
+
+            <div class="skill">
+                <div class="skilllogo d-flex justify-content-center align-items-center mb-3">
+                    <i class="fab fa-laravel fa-5x"></i>
+                </div>
+                <p class="text-center">Laravel</p>
+            </div>
+
+            <div class="skill">
+                <div class="skilllogo d-flex justify-content-center align-items-center mb-3">
+                    <i class="fab fa-node-js fa-5x"></i>
+                </div>
+                <p class="text-center">Node.JS</p>
+            </div>
+        </div>
     </div>
 
     <div id="section-3" class="section">
-        <h1>Certificate</h1>
+        <h1>Portofolio</h1>
+        <div class="owl-carousel">
+
+            <div class="item">
+                <div class="image">
+                    <img src="./asset/img/TicTacToe.png" alt="">
+                </div>
+                <div class="desc">
+                    <div class="text">
+                        <h1>Tic Tac Toe</h1>
+                        <p>A tic tac toe game made with 2 levels of difficulty easy and hard. for the hard level, the
+                            bot is created using the minimax algorithm</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    <div id="section-4" class="section">
-        <h1>Portofolio</h1>
-    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -42,6 +86,27 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="./asset/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                center: true,
+                items: 3,
+                loop: false,
+                margin: 10,
+                autoWidth: true,
+                nav: true,
+                autoplay: false,
+                autoplayTimeout: 3000,
+                responsive: {
+                    600: {
+                        items: 4
+                    }
+                }
+            });
+        });
     </script>
 </body>
 

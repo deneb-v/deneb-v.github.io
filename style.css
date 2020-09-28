@@ -7,7 +7,7 @@ body {
 div.section {
     display: flex;
     height: 100vh;
-    box-shadow: inset 0px 0px 255px 10px #00000070;
+    box-shadow: inset 0px 0px 255px 10px rgba(0, 0, 0, 0.439);
 
     flex-direction: column;
     justify-content: center;
@@ -15,7 +15,7 @@ div.section {
 }
 
 div#section-1 {
-    background-color: rgb(241, 225, 75);
+    background-color: rgb(75, 119, 241);
 
     flex-direction: column;
     justify-content: center;
@@ -25,15 +25,70 @@ div#section-1 {
 
 div#section-1 img#profile {
     border-radius: 50%;
-    height: 15rem;
-    width: 15rem;
+    height: 14rem;
+    width: 14rem;
 }
 
 div#section-2 {
-    background-color: rgb(75, 119, 241);
+    background-color: rgb(71, 231, 138);
 
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+}
+
+div.skilllogo {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: black 1.5px solid;
+}
+
+div#section-3 {
+    background-color: rgb(241, 225, 75);
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+div.item {
+    height: 30rem;
+    width: 54rem;
+}
+
+div.item div.image {
+    /* z-index: -1; */
+    height: 100%;
+    width: 100%;
+}
+
+div.item div.desc {
+    position: absolute;
+    top: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.705);
+}
+
+div.item div.desc div.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+div.item:hover div.desc {
+    opacity: 1;
 }
