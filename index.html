@@ -17,8 +17,7 @@
 
 <body>
     <div id="section-1" class="section">
-        <img id="profile" src="./asset/972941670f3f9c895c2ddbaf50e65fc608ce90e6153a40bdce13c83717942f26.jpg" alt=""
-            class="mb-5">
+        <img id="profile" src="./asset/taurean.jfif" alt="" class="mb-5">
         <h1 class="mb-1">Taurean Orlin Wingardi</h1>
         Backend Developer
     </div>
@@ -58,21 +57,49 @@
 
     <div id="section-3" class="section">
         <h1>Portofolio</h1>
-        <div class="owl-carousel">
+        <div class="owl-carousel mt-3">
             <div class="item">
                 <div class="image">
                     <img src="./asset/img/TicTacToe.png" alt="">
                 </div>
-                <div class="desc">
+                <div class="desc pl-5 pr-5">
                     <div class="text">
                         <h1>Tic Tac Toe</h1>
                         <p>A tic tac toe game made with 2 levels of difficulty easy and hard. for the hard level, the
                             bot is created using the minimax algorithm. This game is created using the p5.js javascript
                             library and node.js as web server.</p>
+                        <a href="http://deneb-tictactoe.herokuapp.com/" target="_blank">Try now</a>
                     </div>
                 </div>
             </div>
-
+            <div class="item">
+                <div class="image">
+                    <img src="./asset/img/mesunda.png" alt="">
+                </div>
+                <div class="desc pl-5 pr-5">
+                    <div class="text">
+                        <h1>Mesunda</h1>
+                        <p>Mesunda is a sales management application based on a web application with the admin to
+                            manage the goods being sold and the regular user to enter sales data. mesunda is created
+                            using the laravel</p>
+                        <a href="https://github.com/deneb-v/Mesunda" target="_blank">Repository link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="./asset/img/artikelmantap.png" alt="">
+                </div>
+                <div class="desc pl-5 pr-5">
+                    <div class="text">
+                        <h1>Artikel Mantap</h1>
+                        <p>Artikel Mantap is a website that contains all articles that have been written by the user.
+                            This website
+                            is created using laravel.</p>
+                        <a href="https://github.com/deneb-v/ArtikelMantap" target="_blank">Repository link</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -98,8 +125,9 @@
                 margin: 10,
                 autoWidth: true,
                 nav: true,
-                autoplay: false,
+                autoplay: true,
                 autoplayTimeout: 3000,
+                rewind: true,
                 responsive: {
                     600: {
                         items: 4
