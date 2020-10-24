@@ -19,7 +19,7 @@
     <div id="section-1" class="section">
         <img id="profile" src="./asset/taurean.jfif" alt="" class="mb-5">
         <h1 class="mb-1">Taurean Orlin Wingardi</h1>
-        Backend Developer
+        Computer Science Student
     </div>
 
     <div id="section-2" class="section">
@@ -80,7 +80,7 @@
                     <div class="text">
                         <h1>Mesunda</h1>
                         <p>Mesunda is a sales management application based on a web application with the admin to
-                            manage the goods being sold and the regular user to enter sales data. mesunda is created
+                            manage the goods being sold and the regular user to enter sales data. Mesunda is created
                             using the laravel</p>
                         <a href="https://github.com/deneb-v/Mesunda" target="_blank">Repository link</a>
                     </div>
@@ -100,6 +100,19 @@
                     </div>
                 </div>
             </div>
+            <div class="item">
+                <div class="image">
+                    <img src="./asset/img/gutnub.png" alt="">
+                </div>
+                <div class="desc pl-5 pr-5">
+                    <div class="text">
+                        <h1>Gutnub</h1>
+                        <p>Gutnub is a web-based application that aims to assist in collaboration and version control.
+                            Gutnub is built using Laravel and the Google API</p>
+                        <a href="https://github.com/deneb-v/Gutnub" target="_blank">Repository link</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -115,8 +128,32 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <script src="./asset/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 
     <script>
+        var controller = new ScrollMagic.Controller({
+            globalSceneOptions: {
+                triggerHook: 'onLeave',
+                duration: "200%"
+            }
+        });
+
+        // get all slides
+        // var slides = document.querySelectorAll("section.panel");
+        var slides = document.getElementsByClassName("section");
+
+        // create scene for every slide
+        for (var i = 0; i < slides.length; i++) {
+            new ScrollMagic.Scene({
+                    triggerElement: slides[i]
+                })
+                .setPin(slides[i], {
+                    pushFollowers: false
+                })
+                .addTo(controller);
+        }
+
+
         $(document).ready(function () {
             $(".owl-carousel").owlCarousel({
                 center: true,
